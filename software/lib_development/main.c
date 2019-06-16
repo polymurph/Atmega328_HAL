@@ -14,6 +14,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
  * Author : Edwin J. Koch
  */ 
 
+#define F_CPU 16000000UL
 #include <avr/io.h>
 
 
