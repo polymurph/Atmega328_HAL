@@ -30,8 +30,18 @@ SOFTWARE.
 #ifndef ATMEGA328_HAL_H_
 #define ATMEGA328_HAL_H_
 
+#if defined(__AVR_ATmega328__)
 
 
+#elif defined(__AVR_ATmega328P__)
+
+
+#elif defined(__AVR_ATmega328PB__)
+
+#else
+#error "Wrong target device!"
+#error "Target device must be of type atmega328/p/pb!"
+#endif
 
 
 #endif /* ATMEGA328_HAL_H_ */

@@ -29,12 +29,11 @@ SOFTWARE.
 #define F_CPU 16000000UL
 #include <avr/io.h>
 
-
 int main(void)
 {
-    /* Replace with your application code */
     while (1) 
     {
+		
     }
 }
 
