@@ -54,6 +54,27 @@ void timer0_CTC_mode()
 	hal_timer0_setCompareValueB(64);
 }
 
+void timer0_fast_pwm_1_mode()
+{
+	hal_timer0_enableModule();
+	hal_timer0_setMode(t0_mode_FAST_PWM_1);
+	hal_timer0_setClockSource(t0_clk_CLK_DIV_1024);
+	hal_timer0_setOutputA(t0_outA_TOGGLE_ON_COMPARE);
+	hal_timer0_setOutputB(t0_outB_TOGGLE_ON_COMPARE);
+	hal_timer0_setCompareValueA(128);
+	hal_timer0_setCompareValueB(64);
+}
+
+void timer0_fast_pwm_2_mode()
+{
+	hal_timer0_enableModule();
+	hal_timer0_setMode(t0_mode_FAST_PWM_2);
+	hal_timer0_setClockSource(t0_clk_CLK_DIV_1024);
+	hal_timer0_setOutputA(t0_outA_TOGGLE_ON_COMPARE);
+	hal_timer0_setOutputB(t0_outB_TOGGLE_ON_COMPARE);
+	hal_timer0_setCompareValueA(128);
+	hal_timer0_setCompareValueB(64);
+}
 
 int main(void)
 {
