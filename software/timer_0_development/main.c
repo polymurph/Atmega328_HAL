@@ -30,9 +30,34 @@ SOFTWARE.
 
 #define F_CPU 16000000UL
 #include <avr/io.h>
+#include "atmega328_hal.h"
+
+void timer0_normal_mode()
+{
+	hal_timer0_enableModule();
+	hal_timer0_setMode(t0_mode_NORMAL);
+	hal_timer0_setClockSource(t0_clk_CLK_DIV_1024);
+	hal_timer0_setOutputA(t0_outA_TOGGLE_ON_COMPARE);
+	hal_timer0_setOutputB(t0_outB_TOGGLE_ON_COMPARE);
+	hal_timer0_setCompareValueA(128);
+	hal_timer0_setCompareValueB(64);
+}
+
+void timer0_CTC_mode()
+{
+	hal_timer0_enableModule();
+	hal_timer0_setMode(t0_mode_CTC);
+	hal_timer0_setClockSource(t0_clk_CLK_DIV_1024);
+	hal_timer0_setOutputA(t0_outA_TOGGLE_ON_COMPARE);
+	hal_timer0_setOutputB(t0_outB_TOGGLE_ON_COMPARE);
+	hal_timer0_setCompareValueA(128);
+	hal_timer0_setCompareValueB(64);
+}
+
 
 int main(void)
 {
+	timer0_normal_mode();
     while (1) 
     {
 		
