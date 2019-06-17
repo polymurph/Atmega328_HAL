@@ -126,6 +126,15 @@
     <Compile Include="atmega328_hal.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="dummy.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal_timer0.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal_timer0.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="main.c">
       <SubType>compile</SubType>
     </Compile>

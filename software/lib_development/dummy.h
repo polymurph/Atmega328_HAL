@@ -22,29 +22,19 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 /*
- * atmega328_hal.h
+ * dummy.h
  *
- * Created: 16-Jun-19 14:35:42
+ * Created: 26-Oct-18 08:49:49
  *  Author: Edwin J. Koch
  */ 
 
 
-#ifndef ATMEGA328_HAL_H_
-#define ATMEGA328_HAL_H_
+#ifndef DUMMY_H_
+#define DUMMY_H_
 
-#if defined(__AVR_ATmega328__)
+static void dummy()
+{
+	
+}
 
-
-#elif defined(__AVR_ATmega328P__)
-
-#include "hal_timer0.h"
-
-#elif defined(__AVR_ATmega328PB__)
-
-#else
-#error "Wrong target device!"
-#error "Target device must be of type atmega328/p/pb!"
-#endif
-
-
-#endif /* ATMEGA328_HAL_H_ */
+#endif /* DUMMY_H_ */
